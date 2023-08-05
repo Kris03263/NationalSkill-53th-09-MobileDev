@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date">
+        <item></item>
+    </string-array>
+    <string-array name="exhibitions">
+        <item>展館1</item>
+        <item>展館2</item>
+        <item>展館3</item>
+        <item>展館4</item>
+        <item>展館5</item>
+    </string-array>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="主頁"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_HomeFragment_to_CommentFragment"
+            app:destination="@id/CommentFragment"
+            app:popUpTo="@id/HomeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_HomeFragment_to_trafficFragment"
+            app:destination="@id/trafficFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_exhibitionIntroFragment"
+            app:destination="@id/exhibitionIntroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GuideFragment"
+        android:name="com.example.myapplication.GuideFragment"
+        android:label="導覽說明"
+        tools:layout="@layout/fragment_guide" />
+    <fragment
+        android:id="@+id/BuyTicketFragment"
+        android:name="com.example.myapplication.BuyTicketFragment"
+        android:label="購票須知"
+        tools:layout="@layout/fragment_buy_ticket">
+        <action
+            android:id="@+id/action_BuyTicketFragment_to_buyControlFragment"
+            app:destination="@id/buyControlFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CommentFragment"
+        android:name="com.example.myapplication.CommentFragment"
+        android:label="意見回饋"
+        tools:layout="@layout/fragment_comment" >
+        <action
+            android:id="@+id/action_CommentFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment"
+            app:popUpTo="@id/CommentFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/exhibitionChipFragment"
+        android:name="com.example.myapplication.ExhibitionChipFragment"
+        android:label="展館資料"
+        tools:layout="@layout/fragment_exhibition_chip" />
+    <fragment
+        android:id="@+id/exhibitionIntroFragment"
+        android:name="com.example.myapplication.ExhibitionIntroFragment"
+        android:label="展館索引"
+        tools:layout="@layout/fragment_exhibition_intro">
+        <action
+            android:id="@+id/action_exhibitionIntroFragment_to_exhibitionChipFragment"
+            app:destination="@id/exhibitionChipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trafficFragment"
+        android:name="com.example.myapplication.TrafficFragment"
+        android:label="交通方式說明"
+        tools:layout="@layout/fragment_traffic" />
+    <fragment
+        android:id="@+id/buyControlFragment"
+        android:name="com.example.myapplication.BuyControlFragment"
+        android:label="購票區域"
+        tools:layout="@layout/fragment_buy_control">
+        <action
+            android:id="@+id/action_buyControlFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication.LoginFragment"
+        android:label="登入介面"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+</navigation>
